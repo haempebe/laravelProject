@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Pages\HomeComponent;
 use App\Http\Livewire\Pages\IncomeComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-route::get('/', IncomeComponent::class)->name('dashboard');
+route::get('/', HomeComponent::class)->name('dashboard');
+route::get('/income', IncomeComponent::class)->name('income');

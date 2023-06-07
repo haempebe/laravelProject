@@ -4,13 +4,12 @@
     <div class="page">
         <!-- Navbar -->
         @include('template.inc.menu')
-        <div class="page-wrtemplateer">
+        <div class="page-wrapper">
             <!-- Page body -->
             <div class="page-body">
                 <div class="container-xl">
-                    @include('template.inc.message')
+                    {{ $slot }}
                 </div>
-                @yield('content')
             </div>
             @include('template.inc.footer')
         </div>

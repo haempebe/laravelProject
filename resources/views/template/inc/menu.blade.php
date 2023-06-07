@@ -42,22 +42,22 @@
                              </span>
                          </a>
                      </li>
-                     <li class="nav-item dropdown {{ request()->routeIs('perpus.*') ? 'active' : '' }}">
+                     <li class="nav-item dropdown {{ request()->routeIs('inputname') ? 'active' : '' }}">
                          <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown"
                              data-bs-auto-close="outside" role="button" aria-expanded="false">
                              <span class="nav-link-title">
-                                 Perpustakaan
+                                 Help
                              </span>
                          </a>
                          <div class="dropdown-menu">
                              <a class="dropdown-item" href="#" rel="noopener">
-                                 Kategori
+                                 1
                              </a>
                              <a class="dropdown-item" href="#">
-                                 Author
+                                 2
                              </a>
                              <a class="dropdown-item" href="#" rel="noopener">
-                                 Peminjaman
+                                 3
                              </a>
                          </div>
                      </li>
