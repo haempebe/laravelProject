@@ -1,3 +1,4 @@
+@section('pageTitle', 'Dashboard')
 <div>
     ini adalah halaman home
     <div class="col-12 d-flex flex-column justify-content-center">

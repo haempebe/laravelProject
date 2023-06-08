@@ -12,7 +12,7 @@ class SignupComponent extends Component
     public $password;
     protected $rules = [
         'name' => 'required|min:1',
-        'email' => 'required|min:1|unique',
+        'email' => 'required|min:1',
         'password' => 'required|min:8|max:20',
     ];
 
@@ -26,7 +26,7 @@ class SignupComponent extends Component
             'password' => $this->password,
         ]);
         session()->flash('message', 'Account successfully created!');
-        return redirect(back());
+        return redirect(route("dashboard"));
         // return redirect()->to('/income');
     }
 

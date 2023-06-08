@@ -22,7 +22,7 @@
                     </form>
                 </div>
                 <!-- Page title actions -->
-                <div class="col-auto ms-auto d-print-none">
+                <div class="ps-5 col-auto ms-auto d-print-none">
                     <div class="btn-list">
                         <a href="{{ route('signup') }}" class="btn btn-primary d-none d-sm-inline-block">
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
@@ -44,7 +44,8 @@
                                     {{-- @foreach ($showUser as $item) --}}
                                     <div class="d-none d-xl-block ps-2">
                                         <div>{{ auth()->user()->name }}</div>
-                                        <div class="mt-1 small text-muted">{{ auth()->user()->email }}</div>
+                                        <div class="mt-1 small text-muted">{{ substr(auth()->user()->email, 0, 5) }}...
+                                        </div>
                                     </div>
                                     {{-- @endforeach --}}
                                 </a>

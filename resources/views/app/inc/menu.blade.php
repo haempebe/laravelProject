@@ -12,7 +12,7 @@
                 <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('dashboard') }}">
                         <span class="nav-link-title">
-                            dashboard
+                            Dashboard
                         </span>
                     </a>
                 </li>

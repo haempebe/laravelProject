@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>@yield('pageTitle') - Aplikasi Kami</title>
+    <title>@yield('pageTitle') - Aplikasi Keuangan</title>
     <!-- CSS files -->
     <link href="{{ asset('assets/dist/css/tabler.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/dist/css/demo.min.css') }}" rel="stylesheet" />
