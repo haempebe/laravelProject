@@ -43,8 +43,8 @@
                                         style="background-image: url({{ asset('assets/static/avatars/000m.jpg') }})"></span>
                                     {{-- @foreach ($showUser as $item) --}}
                                     <div class="d-none d-xl-block ps-2">
-                                        <div>{{-- {{ $item->name }} --}} pawel kuna</div>
-                                        <div class="mt-1 small text-muted">{{-- {{ $item->email }} --}} ui designer</div>
+                                        <div>{{ auth()->user()->name }}</div>
+                                        <div class="mt-1 small text-muted">{{ auth()->user()->email }}</div>
                                     </div>
                                     {{-- @endforeach --}}
                                 </a>
