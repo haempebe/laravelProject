@@ -5,6 +5,7 @@
         <!-- Navbar -->
         @include('app.inc.menu')
         <div class="page-wrapper">
+            @include('app.inc.sbtn')
             <!-- Page body -->
             <div class="page-body">
                 <div class="container-xl">

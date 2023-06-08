@@ -9,14 +9,21 @@
         </h1>
         <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
-                <li class="nav-item">
-                    <a class="nav-link" href="./">
+                <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('dashboard') }}">
                         <span class="nav-link-title">
-                            Home
+                            dashboard
                         </span>
                     </a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item {{ request()->routeIs('income') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('income') }}">
+                        <span class="nav-link-title">
+                            Income
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown {{ request()->routeIs('help') ? 'active' : '' }}">
                     <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown"
                         data-bs-auto-close="false" role="button" aria-expanded="false">
                         <span class="nav-link-title">

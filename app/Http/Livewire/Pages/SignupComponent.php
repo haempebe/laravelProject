@@ -18,7 +18,7 @@ class SignupComponent extends Component
 
     public function createAccount()
     {
-        // $this->validate();
+        $this->validate();
 
         User::create([
             'name' => $this->name,
@@ -27,10 +27,11 @@ class SignupComponent extends Component
         ]);
         session()->flash('message', 'Account successfully created!');
         return redirect(back());
+        // return redirect()->to('/income');
     }
 
     public function render()
     {
-        return view('livewire.pages.signup-component')->layout('template.auth');
+        return view('livewire.pages.signup-component')->layout('app.auth');
     }
 }

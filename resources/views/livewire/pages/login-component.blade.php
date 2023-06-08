@@ -46,9 +46,6 @@
                     <div class="form-footer">
                         <button type="submit" class="btn btn-primary w-100">Sign in</button>
                     </div>
-                    <div class="form-footer">
-                        <a href="{{ route('signup') }}">Dont have an account, Sign up?</a>
-                    </div>
                 </form>
             </div>
         </div>

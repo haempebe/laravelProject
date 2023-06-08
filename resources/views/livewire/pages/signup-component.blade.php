@@ -16,8 +16,8 @@
             @endif
         </div>
         <div class="text-center mb-4">
-            <a href="#" class="navbar-brand navbar-brand-autodark"><img src="{{ asset('assets/static/logo.svg') }}"
-                    height="36" alt=""></a>
+            <a href="{{ route('dashboard') }}" class="navbar-brand navbar-brand-autodark"><img
+                    src="{{ asset('assets/static/logo.svg') }}" height="36" alt=""></a>
         </div>
         <div class="card card-md">
             <div class="card-body">

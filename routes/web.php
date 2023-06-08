@@ -19,13 +19,13 @@ use App\Http\Livewire\Pages\Income\UpdateComponent;
 |
 */
 
-Route::get("/", HomeComponent::class)->name("dashboard");
-Route::get("/signup", SignupComponent::class)->name("signup");
 Route::middleware(['guest'])->group(function () {
     Route::get("/login", LoginComponent::class)->name("login");
 });
 
 Route::middleware(['auth'])->group(function () {
+    Route::get("/signup", SignupComponent::class)->name("signup");
+    Route::get("/", HomeComponent::class)->name("dashboard");
     Route::get("/income", IncomeComponent::class)->name("income");
     Route::get("/income/create", CreateComponent::class)->name("income.create");
     Route::get("/income/{incomeId}/update", UpdateComponent::class)->name("income.update");

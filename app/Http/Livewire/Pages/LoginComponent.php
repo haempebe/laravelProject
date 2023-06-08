@@ -44,6 +44,6 @@ class LoginComponent extends Component
     public function render()
     {
         // $allUser = User::query()->latest()->get();
-        return view('livewire.pages.login-component')->layout("template.auth");
+        return view('livewire.pages.login-component')->layout("app.auth");
     }
 }

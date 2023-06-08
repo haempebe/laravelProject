@@ -6,9 +6,6 @@
                 <div class="col-6 col-sm-4 col-md-2 col-xl py-3">
                     <a href="{{ route('income') }}" class="btn btn-primary">Get Started</a>
                 </div>
-                <div class="col-6 col-sm-4 col-md-2 col-xl py-3">
-                    <a href="{{ route('signup') }}" class="btn">Sign Up</a>
-                </div>
             </div>
         </div>
     </div>
