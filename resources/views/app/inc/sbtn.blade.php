@@ -41,12 +41,12 @@
                                     aria-label="Open user menu">
                                     <span class="avatar avatar-sm"
                                         style="background-image: url({{ asset('assets/static/avatars/000m.jpg') }})"></span>
-                                    @foreach ($collection as $item)
-                                        <div class="d-none d-xl-block ps-2">
-                                            <div>Paweł Kuna</div>
-                                            <div class="mt-1 small text-muted">UI Designer</div>
-                                        </div>
-                                    @endforeach
+                                    {{-- @foreach ($showUser as $item) --}}
+                                    <div class="d-none d-xl-block ps-2">
+                                        <div>{{-- {{ $item->name }} --}} pawel kuna</div>
+                                        <div class="mt-1 small text-muted">{{-- {{ $item->email }} --}} ui designer</div>
+                                    </div>
+                                    {{-- @endforeach --}}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <a href="./profile.html" class="dropdown-item">Profile</a>
