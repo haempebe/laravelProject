@@ -1,3 +1,1 @@
-<div>
-    {{-- In work, do what you enjoy. --}}
-</div>
+<a wire:click.prevent="logout" class="dropdown-item">Logout</a>

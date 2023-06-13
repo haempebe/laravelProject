@@ -6,11 +6,11 @@ use Livewire\Component;
 
 class LogoutComponent extends Component
 {
-    // public function actionlogout()
-    // {
-    //     Auth::logout();
-    //     return redirect('/');
-    // }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect(route('login'));
+    }
 
     public function render()
     {

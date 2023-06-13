@@ -7,6 +7,7 @@ use App\Http\Livewire\Pages\IncomeComponent;
 use App\Http\Livewire\Pages\SignupComponent;
 use App\Http\Livewire\Pages\Income\CreateComponent;
 use App\Http\Livewire\Pages\Income\UpdateComponent;
+use App\Http\Livewire\Pages\LogoutComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::middleware(['guest'])->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get("/", HomeComponent::class)->name("dashboard");
+    Route::get("/logout", LogoutComponent::class)->name("logout");
     Route::get("/signup", SignupComponent::class)->name("signup");
     Route::get("/income", IncomeComponent::class)->name("income");
     Route::get("/income/create", CreateComponent::class)->name("income.create");

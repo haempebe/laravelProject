@@ -16,6 +16,8 @@ class LoginComponent extends Component
     // }
 
 
+
+
     public $email;
     public $password;
     protected $rules = [
@@ -35,8 +37,6 @@ class LoginComponent extends Component
             // jika validasi if berhasil maka login, jika gagal maka masuk ke else
             session()->flash('message', 'Successfully login with your account!');
             return redirect(route("dashboard"));
-        } elseif (Auth::check()) {
-            return redirect(route('dashboard'));
         } else {
             // notifikasi jika gagal
             session()->flash('error', 'Something wrong credentials!');

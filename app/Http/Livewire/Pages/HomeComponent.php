@@ -13,6 +13,7 @@ class HomeComponent extends Component
     //     return 'showUser' . $showUser;
     // }
 
+
     public function render()
     {
         return view('livewire.pages.home-component')->layout('app.app');
