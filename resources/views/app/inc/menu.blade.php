@@ -16,7 +16,7 @@
                         </span>
                     </a>
                 </li>
-                <li class="nav-item {{ request()->routeIs('income') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->routeIs('income', 'income.create') ? 'active' : '' }}">
                     <a class="nav-link" href="{{ route('income') }}">
                         <span class="nav-link-title">
                             Income

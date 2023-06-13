@@ -9,7 +9,9 @@
             <!-- Page body -->
             <div class="page-body">
                 <div class="container-xl">
-                    {{ $slot }}
+                    <div class="container-xl">
+                        {{ $slot }}
+                    </div>
                 </div>
             </div>
             @include('app.inc.footer')

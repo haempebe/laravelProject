@@ -1,13 +1,18 @@
 @section('pageTitle', 'Dashboard')
-<div>
-    ini adalah halaman home
-    <div class="col-12 d-flex flex-column justify-content-center">
-        <div class="empty">
-            <div class="row align-items-center col-3">
-                <div class="col-6 col-sm-4 col-md-2 col-xl py-3">
-                    <a href="{{ route('income') }}" class="btn btn-primary">Get Started</a>
-                </div>
-            </div>
+@section('button')
+
+    <div class="col-auto ms-auto d-print-none">
+        <div class="btn-list">
+
+            <a href="{{ route('income') }}" class="btn btn-primary d-none d-sm-inline-block">
+                Get Started
+            </a>
+
         </div>
     </div>
+
+@endsection
+<div>
+    ini adalah halaman home
+
 </div>

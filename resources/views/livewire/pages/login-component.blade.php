@@ -21,7 +21,7 @@
         </div>
         <div class="card card-md">
             <div class="card-body">
-                <h2 class="h2 text-center mb-4">Login to your account</h2>
+                <h2 class="card-title text-center mb-4">Login to your account</h2>
                 <form wire:submit.prevent="handleLogin()" autocomplete="off" novalidate>
                     <div class="mb-3">
                         <label class="form-label required">Email address</label>

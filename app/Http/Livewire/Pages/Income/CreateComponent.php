@@ -8,6 +8,6 @@ class CreateComponent extends Component
 {
     public function render()
     {
-        return view('livewire.pages.income.create-component');
+        return view('livewire.pages.income.create-component')->layout('app.app');
     }
 }

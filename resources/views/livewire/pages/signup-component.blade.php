@@ -21,7 +21,7 @@
         </div>
         <div class="card card-md">
             <div class="card-body">
-                <h2 class="h2 text-center mb-4">Sign up your account</h2>
+                <h2 class="card-title text-center mb-4">Create New Account</h2>
                 <form wire:submit.prevent="createAccount()" autocomplete="off" novalidate>
                     <div class="mb-3">
                         <label class="form-label required">Name</label>
@@ -54,8 +54,8 @@
                     <div class="form-footer">
                         <button type="submit" class="btn btn-primary w-100">Sign Up</button>
                     </div>
-                    <div class="form-footer">
-                        <a href="{{ route('login') }}">back to Sign in</a>
+                    <div class="form-footer">Already have account?
+                        <a href="{{ route('login') }}">Sign in</a>
                     </div>
                 </form>
             </div>
