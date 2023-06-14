@@ -30,6 +30,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Amount</th>
+                                <th>Description</th>
                                 <th class="w-1"></th>
                             </tr>
                         </thead>
