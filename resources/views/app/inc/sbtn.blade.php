@@ -55,7 +55,7 @@
                                         <a href="./profile.html" class="dropdown-item">Profile</a>
                                         <div class="dropdown-divider"></div>
 
-                                        @livewire('pages.logout-component')
+                                        <livewire:pages.logout-component />
 
                                     </div>
                                 </div>

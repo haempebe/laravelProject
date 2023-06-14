@@ -54,9 +54,9 @@
                     <div class="form-footer">
                         <button type="submit" class="btn btn-primary w-100">Sign Up</button>
                     </div>
-                    <div class="form-footer">Already have account?
+                    {{-- <div class="form-footer">Already have account?
                         <a href="{{ route('login') }}">Sign in</a>
-                    </div>
+                    </div> --}}
                 </form>
             </div>
         </div>

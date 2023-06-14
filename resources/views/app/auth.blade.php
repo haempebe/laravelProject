@@ -23,7 +23,7 @@
     @livewireStyles
 </head>
 
-<body class="layout-boxed d-flex flex-column">
+<body class="layout-boxed">
     <div class="page page-center">
         {{ $slot }}
     </div>
