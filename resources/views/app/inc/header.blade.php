@@ -9,6 +9,8 @@
     <!-- CSS files -->
     <link href="{{ asset('assets/dist/css/tabler.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/dist/css/demo.min.css') }}" rel="stylesheet" />
+    <livewire:styles />
+
     <style>
         @import url('https://rsms.me/inter/inter.css');
 

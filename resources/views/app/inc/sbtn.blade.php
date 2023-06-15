@@ -54,8 +54,9 @@
                                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                         <a href="./profile.html" class="dropdown-item">Profile</a>
                                         <div class="dropdown-divider"></div>
+                                        <a href="{{ url('logout') }}" class="dropdown-item">Logout</a>
 
-                                        <livewire:pages.logout-component />
+                                        {{-- <livewire:pages.logout-component /> --}}
 
                                     </div>
                                 </div>

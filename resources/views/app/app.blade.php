@@ -21,6 +21,9 @@
     <!-- Tabler Core -->
     <script src="{{ asset('assets/dist/js/tabler.min.js') }}" defer></script>
     <script src="{{ asset('assets/dist/js/demo.min.js') }}" defer></script>
+    <livewire:scripts />
+
+
     {{-- <script src="{{ asset('assets/dist/js/vertical.js') }}" defer></script> --}}
 </body>
 

@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class IncomeCreate extends Model
+class Income extends Model
 {
     use HasFactory;
-    protected $table = "income_creates";
+    protected $table = "incomes";
     protected $fillable = ['name', 'amount', 'description'];
 }

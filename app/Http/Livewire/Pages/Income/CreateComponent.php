@@ -2,7 +2,8 @@
 
 namespace App\Http\Livewire\Pages\Income;
 
-use App\Models\IncomeCreate;
+use App\Models\Income;
+
 use Livewire\Component;
 
 class CreateComponent extends Component
@@ -10,27 +11,14 @@ class CreateComponent extends Component
     public $name;
     public $amount;
     public $description;
-    // public $image;
-    protected $rules = [
-        'name' => 'required|min:1',
-        'amount' => 'required|min:1',
-        'description' => 'required|min:1',
-        // 'image' => 'required|min:1',
-    ];
-
-    public function create()
+    public function createForm()
     {
-        $this->validate();
-
-        IncomeCreate::create([
+        Income::create([
             'name' => $this->name,
-            'amount' => $this->amount,
-            'description' => $this->description,
-            // 'image' => $this->image,
         ]);
-        session()->flash('message', 'New Income successfully created!');
-        return redirect(route("income"));
-        // return redirect()->to('/income');
+
+        // session()->flash('message', 'New Income successfully created!');
+        // return redirect(route("income"));
     }
 
     public function render()

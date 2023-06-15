@@ -1,13 +1,14 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Pages\HomeComponent;
 use App\Http\Livewire\Pages\LoginComponent;
 use App\Http\Livewire\Pages\IncomeComponent;
+use App\Http\Livewire\Pages\LogoutComponent;
 use App\Http\Livewire\Pages\SignupComponent;
 use App\Http\Livewire\Pages\Income\CreateComponent;
 use App\Http\Livewire\Pages\Income\UpdateComponent;
-use App\Http\Livewire\Pages\LogoutComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,17 @@ use App\Http\Livewire\Pages\LogoutComponent;
 |
 */
 
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+});
+Route::get("/signup", SignupComponent::class)->name("signup");
 
 Route::middleware(['guest'])->group(function () {
     Route::get("/login", LoginComponent::class)->name("login");
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get("/signup", SignupComponent::class)->name("signup");
     Route::get("/", HomeComponent::class)->name("dashboard");
     Route::get("/income", IncomeComponent::class)->name("income");
     Route::get("/income/create", CreateComponent::class)->name("income.create");
