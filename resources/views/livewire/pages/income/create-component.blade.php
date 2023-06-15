@@ -28,7 +28,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <form wire:submit.prevent="incomeCreate()" autocomplete="off">
+                    <form wire:submit.prevent="create()" autocomplete="off" novalidate>
                         <div class="row">
                             <div class="{{-- col-8 --}} ">
                                 {{-- <div class="card">
@@ -36,9 +36,12 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="mb-3">
-                                            <label class="form-label required">Nama</label>
+                                            <label class="form-label required">name income</label>
                                             <input type="text" class="form-control" wire:model="name"
-                                                placeholder="Input Username">
+                                                placeholder="Input name income">
+                                            @error('name')
+                                                <span class="error">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -46,6 +49,9 @@
                                             <label class="form-label required">Amount</label>
                                             <input type="number" min="0"step="1000" class="form-control"
                                                 wire:model="amount" placeholder="Input an Amount">
+                                            @error('amount')
+                                                <span class="error">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -53,6 +59,9 @@
                                             <label class="form-label required">Description</label>
                                             <textarea rows="5" class="form-control" placeholder="your description" wire:model="description"
                                                 style="height: 150px;"></textarea>
+                                            @error('description')
+                                                <span class="error">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +77,7 @@
                                 </div>
                             </div> --}}
                         </div>
-                        <button type="submit" class="mt-3 btn btn-primary">Create </button>
+                        <button type="submit" class="btn btn-primary">create</button>
                     </form>
                 </div>
             </div>

@@ -27,7 +27,6 @@ class SignupComponent extends Component
         ]);
         session()->flash('message', 'Account successfully created!');
         return redirect(route("dashboard"));
-        // return redirect()->to('/income');
     }
 
     public function render()

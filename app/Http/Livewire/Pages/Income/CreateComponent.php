@@ -13,12 +13,12 @@ class CreateComponent extends Component
     // public $image;
     protected $rules = [
         'name' => 'required|min:1',
-        'amount' => 'required|',
-        'description' => 'required|',
-        'image' => 'required|',
+        'amount' => 'required|min:1',
+        'description' => 'required|min:1',
+        // 'image' => 'required|min:1',
     ];
 
-    public function incomeCreate()
+    public function create()
     {
         $this->validate();
 

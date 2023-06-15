@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class IncomeCreate extends Model
 {
     use HasFactory;
-    protected $table = "income_creates";
+    protected $table = "income_create";
     protected $fillable = ["name", "amount", "description", /*"image"*/];
 }

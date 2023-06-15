@@ -24,8 +24,10 @@
 </head>
 
 <body class="layout-boxed">
-    <div class="page page-center">
-        {{ $slot }}
+    <div class="card">
+        <div class="card-body">
+            {{ $slot }}
+        </div>
     </div>
     <script src="{{ asset('assets/dist/js/tabler.min.js') }}" defer></script>
     @livewireScripts

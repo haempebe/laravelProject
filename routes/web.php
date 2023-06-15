@@ -30,6 +30,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get("/", HomeComponent::class)->name("dashboard");
     Route::get("/income", IncomeComponent::class)->name("income");
     Route::get("/income/create", CreateComponent::class)->name("income.create");
-    Route::get("/income/{incomeId}/update", UpdateComponent::class)->name("income.update");
-    Route::delete("/income/{incomeId}/delete", IncomeComponent::class)->name("income.destroy");
+    // Route::get("/income/{incomeId}/update", UpdateComponent::class)->name("income.update");
+    // Route::delete("/income/{incomeId}/delete", IncomeComponent::class)->name("income.destroy");
 });
