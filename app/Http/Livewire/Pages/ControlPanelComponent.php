@@ -2,12 +2,14 @@
 
 namespace App\Http\Livewire\Pages;
 
+use App\Models\Income;
 use Livewire\Component;
 
 class ControlPanelComponent extends Component
 {
     public function render()
     {
-        return view('livewire.pages.control-panel-component')->layout('app.app');
+        $totalIncome = Income::sum('amount');
+        return view('livewire.pages.control-panel-component', ['totalIncome'=>$totalIncome])->layout('app.app');
     }
 }

@@ -37,8 +37,6 @@
                     </thead>
                     <tbody>
                         @foreach ($showIncome as $item)
-                            @if ($item->id == 1)
-                            @else
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td class="text-muted">
@@ -64,7 +62,6 @@
                                         </form>
                                     </td>
                                 </tr>
-                            @endif
                         @endforeach
                     </tbody>
                 </table>

@@ -18,6 +18,7 @@
                         </a>
                     </li>
                     @if (auth()->user()->id == 1)
+                    @else
                         <li
                             class="nav-item dropdown {{ request()->routeIs('user.admin.*', 'user.member.*', 'signup') ? 'active' : '' }}">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
