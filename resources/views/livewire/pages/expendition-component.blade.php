@@ -36,7 +36,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($showexpendition as $item)
+                        @foreach ($showExpendition as $item)
                             @if ($item->id == 1)
                             @else
                                 <tr>
@@ -65,7 +65,7 @@
                                     </td>
                                 </tr>
                             @endif
-                        @endforeach --}}
+                        @endforeach
                     </tbody>
                 </table>
             </div>

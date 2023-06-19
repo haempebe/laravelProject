@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\pages\finance;
 
-use App\Http\Controllers\Controller;
+use App\Models\expendition;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class expenditioncreate extends Controller
 {
@@ -26,7 +27,7 @@ class expenditioncreate extends Controller
             'account' => $request->account,
             'description' => $request->description
         ];
-        ModelsExpendition::create($data);
+        expendition::create($data);
         return redirect()->route('finance.expendition.index')->with('success', 'added data successfully');
     }
 }

@@ -23,11 +23,9 @@
     @livewireStyles
 </head>
 
-<body class="layout-boxed">
-    <div class="card">
-        <div class="card-body">
-            {{ $slot }}
-        </div>
+<body style=" overflow: hidden;">
+    <div class="page">
+        {{ $slot }}
     </div>
     <script src="{{ asset('assets/dist/js/tabler.min.js') }}" defer></script>
     @livewireScripts

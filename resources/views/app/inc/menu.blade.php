@@ -46,16 +46,16 @@
                         </a>
                     </li>
                     <div class="dropdown-divider"></div>
-                    <li class="nav-item dropdown {{ request()->routeIs('finance.income.*') ? 'active' : '' }}">
+                    <li class="nav-item dropdown {{ request()->routeIs('finance.*') ? 'active' : '' }}">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             data-bs-auto-close="false" role="button"
-                            aria-expanded="{{ request()->routeIs('finance.income.*') ? 'true' : '' }}">
+                            aria-expanded="{{ request()->routeIs('finance.*') ? 'true' : '' }}">
                             <span class="nav-link-title">
                                 Finance
                             </span>
                         </a>
-                        <div class="dropdown-menu {{ request()->routeIs('finance.income.*') ? 'show' : '' }}">
-                            <a class="dropdown-item" href="#">
+                        <div class="dropdown-menu {{ request()->routeIs('finance.*') ? 'show' : '' }}">
+                            <a class="dropdown-item" href="{{ route('finance.controlpanel.index') }}">
                                 Control Panel
                             </a>
                             <a class="dropdown-item" href="{{ route('finance.income.index') }}">

@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('incomes', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            $table->string("amount")->nullable();
-            $table->string("account")->nullable();
-            $table->string("description")->nullable();
+            $table->integer("amount");
+            $table->string("account");
+            $table->string("description");
             $table->timestamps();
         });
     }

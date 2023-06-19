@@ -1,4 +1,12 @@
 @section('pageTitle', 'Member Account')
+@section('button')
+    <div class="col-auto ms-auto d-print-none">
+        <div class="btn-list">
+            <a href="{{ route('signup') }}" class="btn d-none d-sm-inline-block">
+                create new member </a>
+        </div>
+    </div>
+@endsection
 <div>
     <div class="col-lg-12">
         <div class="card">

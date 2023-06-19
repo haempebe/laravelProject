@@ -1,11 +1,9 @@
 <?php
 
-use App\Http\Controllers\pages\finance\expenditioncreate;
 use App\Http\Livewire\Pages\Admin;
 use App\Http\Livewire\Pages\Member;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Pages\Expendition;
 use App\Http\Livewire\Pages\HomeComponent;
 use App\Http\Livewire\Pages\LoginComponent;
 use App\Http\Livewire\Pages\IncomeComponent;
@@ -13,8 +11,11 @@ use App\Http\Livewire\Pages\LogoutComponent;
 use App\Http\Livewire\Pages\SignupComponent;
 use App\Http\Controllers\pages\finance\income;
 use App\Http\Livewire\Pages\Expendition\Create;
+use App\Http\Livewire\Pages\ExpenditionComponent;
+use App\Http\Livewire\Pages\ControlPanelComponent;
 use App\Http\Livewire\Pages\Income\CreateComponent;
 use App\Http\Livewire\Pages\Income\UpdateComponent;
+use App\Http\Controllers\pages\finance\expenditioncreate;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,13 +53,18 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::prefix('finance')->name("finance.")->group(function () {
+        Route::prefix('controlpanel')->name("controlpanel.")->group(function () {
+            Route::get("", ControlPanelComponent::class)->name("index");
+            Route::get("/create", CreateComponent::class)->name("create");
+            Route::post("/store", [ControlPanel::class, 'store'])->name("store");
+        });
         Route::prefix('income')->name("income.")->group(function () {
             Route::get("", IncomeComponent::class)->name("index");
             Route::get("/create", CreateComponent::class)->name("create");
             Route::post("/store", [income::class, 'store'])->name("store");
         });
         Route::prefix('expendition')->name("expendition.")->group(function () {
-            Route::get("", Expendition::class)->name("index");
+            Route::get("", ExpenditionComponent::class)->name("index");
             Route::get("/create", Create::class)->name("create");
             Route::post("/store", [expenditioncreate::class, 'store'])->name("store");
         });

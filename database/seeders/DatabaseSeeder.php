@@ -15,12 +15,20 @@ class DatabaseSeeder extends Seeder
     {
         //     \App\Models\User::factory(10)->create();
 
-        \App\Models\User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'password' => bcrypt('123'),
-            
-        ]);
+        $users = array(
+            [
+                'name' => 'Administrator',
+                'email' => 'admin@email.com',
+                'password' => bcrypt('123'),
+                'is_admin' => 1
+            ],
+        );
 
+        array_map(function (array $user) {
+            User::query()->updateOrCreate(
+                ['email' => $user['email']],
+                $user
+            );
+        }, $users);
     }
 }

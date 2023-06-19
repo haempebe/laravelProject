@@ -1,8 +1,8 @@
-@section('pageTitle', 'Create Expendition')
+@section('pageTitle', 'Create Income')
 @section('button')
     <div class="col-auto ms-auto d-print-none">
         <div class="btn-list">
-            <a href="{{ route('finance.expendition.index') }}" class="btn d-none d-sm-inline-block">
+            <a href="{{ route('finance.income.index') }}" class="btn d-none d-sm-inline-block">
                 <-- Back </a>
         </div>
     </div>
@@ -28,8 +28,8 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <form wire:submit.prevent="createForm" action="{{ route('finance.expendition.store') }}"
-                        method="POST" autocomplete="off">
+                    <form wire:submit.prevent="createForm" action="{{ route('finance.income.store') }}" method="POST"
+                        autocomplete="off">
                         @csrf
                         @method('post')
                         <div class="row">
