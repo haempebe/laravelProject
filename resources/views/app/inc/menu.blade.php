@@ -9,39 +9,71 @@
         </h1>
         <div class="collapse navbar-collapse" id="sidebar-menu">
             <ul class="navbar-nav pt-lg-3">
-                <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('dashboard') }}">
-                        <span class="nav-link-title">
-                            Dashboard
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item {{ request()->routeIs('income', 'income.create') ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('income') }}">
-                        <span class="nav-link-title">
-                            Income
-                        </span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown {{ request()->routeIs('help') ? 'active' : '' }}">
-                    <a class="nav-link dropdown-toggle" href="#navbar-help" data-bs-toggle="dropdown"
-                        data-bs-auto-close="false" role="button" aria-expanded="false">
-                        <span class="nav-link-title">
-                            Help
-                        </span>
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">
-                            Documentation
+                <div class="dropdown-menu dropdown-menu-demo" data-bs-theme="dark">
+                    <li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('dashboard') }}">
+                            <span class="nav-link-title">
+                                Dashboard
+                            </span>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Changelog
+                    </li>
+                    @if (auth()->user()->id == 1)
+                        <li
+                            class="nav-item dropdown {{ request()->routeIs('user.admin.*', 'user.member.*', 'signup') ? 'active' : '' }}">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                data-bs-auto-close="false" role="button"
+                                aria-expanded="{{ request()->routeIs('user.admin.*') ? 'true' : '' }}">
+                                <span class="nav-link-title">
+                                    User
+                                </span>
+                            </a>
+                            <div
+                                class="dropdown-menu {{ request()->routeIs('user.admin.*', 'user.member.*', 'signup') ? 'show' : '' }}">
+                                <a class="dropdown-item" href="{{ route('user.admin.index') }}">
+                                    Admin
+                                </a>
+                                <a class="dropdown-item" href="{{ route('user.member.index') }}">
+                                    Member
+                                </a>
+                            </div>
+                        </li>
+                    @endif
+                    <li class="nav-item {{ request()->routeIs('submission') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('dashboard') }}">
+                            <span class="nav-link-title">
+                                Submission
+                            </span>
                         </a>
-                        <a class="dropdown-item" href="#">
-                            Source code
+                    </li>
+                    <div class="dropdown-divider"></div>
+                    <li class="nav-item dropdown {{ request()->routeIs('finance.income.*') ? 'active' : '' }}">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            data-bs-auto-close="false" role="button"
+                            aria-expanded="{{ request()->routeIs('finance.income.*') ? 'true' : '' }}">
+                            <span class="nav-link-title">
+                                Finance
+                            </span>
                         </a>
-                    </div>
-                </li>
+                        <div class="dropdown-menu {{ request()->routeIs('finance.income.*') ? 'show' : '' }}">
+                            <a class="dropdown-item" href="#">
+                                Control Panel
+                            </a>
+                            <a class="dropdown-item" href="{{ route('finance.income.index') }}">
+                                Income (saldo)
+                            </a>
+                            <a class="dropdown-item" href="{{ route('finance.expendition.index') }}">
+                                Expendition
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                Source code
+                            </a>
+                        </div>
+                    </li>
+                </div>
+
+
+
+
             </ul>
         </div>
     </div>

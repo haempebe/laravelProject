@@ -4,13 +4,13 @@
         {{-- <div class="card">
             <div class="card-body"> --}}
         <div class="row">
-            <div class="col-lg-8 py-6">
+            <div class="col-lg-8 ">
 
-                <img src="https://img.freepik.com/free-vector/money-income-attraction_74855-6573.jpg?w=740&t=st=1686733316~exp=1686733916~hmac=3f5f6f171ddfd229b99299d96b8037385521d24278148d754747b927efc68a49"
-                    alt="">
+                <img class="h-100 w-100" style="object-fit: cover;object-position: center;"
+                    src="{{ asset('assets/1.jpg') }}" alt="">
 
             </div>
-            <div class="col-lg-4 py-auto">
+            <div class="col-lg-4 py-auto p-5">
                 <div class="text-center my-5">
                     <a href="#" class="navbar-brand navbar-brand-autodark"><img
                             src="{{ asset('assets/static/logo.svg') }}" height="36" alt=""></a>

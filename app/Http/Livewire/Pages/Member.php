@@ -1,19 +1,16 @@
 <?php
 
-namespace App\Http\Livewire\Pages\Income;
+namespace App\Http\Livewire\Pages;
 
 use App\Models\User;
-
-use App\Models\Income;
 use Livewire\Component;
 
-class CreateComponent extends Component
+class Member extends Component
 {
-
     public function render()
     {
         $showUser = User::query()->latest()->get();
-        return view('livewire.pages.income.create-component', [
+        return view('livewire.pages.member', [
             'showUser' => $showUser
         ])->layout("app.app");
     }

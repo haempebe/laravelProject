@@ -1,10 +1,10 @@
-@section('pageTitle', 'Income')
+@section('pageTitle', 'Expendition')
 @section('button')
 
     <div class="col-auto ms-auto d-print-none">
         <div class="btn-list">
 
-            <a href="{{ route('finance.income.create') }}" class="btn d-none d-sm-inline-block">
+            <a href="{{ route('finance.expendition.create') }}" class="btn d-none d-sm-inline-block">
                 <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -12,7 +12,7 @@
                     <path d="M12 5l0 14"></path>
                     <path d="M5 12l14 0"></path>
                 </svg>
-                Create New Income
+                Create New expendition
             </a>
 
         </div>
@@ -28,7 +28,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name Income</th>
+                            <th>Name expendition</th>
                             <th>Amount</th>
                             <th>account</th>
                             <th>Descriptions</th>
@@ -36,7 +36,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($showIncome as $item)
+                        {{-- @foreach ($showexpendition as $item)
                             @if ($item->id == 1)
                             @else
                                 <tr>
@@ -65,7 +65,7 @@
                                     </td>
                                 </tr>
                             @endif
-                        @endforeach
+                        @endforeach --}}
                     </tbody>
                 </table>
             </div>

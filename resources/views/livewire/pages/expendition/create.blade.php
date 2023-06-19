@@ -1,4 +1,4 @@
-@section('pageTitle', 'Create Expendition')
+@section('pageTitle', 'Create expendition')
 @section('button')
     <div class="col-auto ms-auto d-print-none">
         <div class="btn-list">
@@ -28,8 +28,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="row">
-                    <form wire:submit.prevent="createForm" action="{{ route('finance.expendition.store') }}"
-                        method="POST" autocomplete="off">
+                    <form action="{{ route('finance.expendition.store') }}" method="POST" autocomplete="off">
                         @csrf
                         @method('post')
                         <div class="row">

@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Pages;
 
-use App\Models\IncomeCreate;
+use App\Models\Income;
 use Livewire\Component;
 
 class IncomeComponent extends Component
@@ -16,8 +16,9 @@ class IncomeComponent extends Component
     // }
     public function render()
     {
-        // $allIncome = IncomeCreate::query()->latest()->get();
-        // dd($allIncome);
-        return view('livewire.pages.income-component')->layout("app.app");
+        $showIncome = Income::query()->latest()->get();
+        return view('livewire.pages.income-component', [
+            'showIncome' => $showIncome
+        ])->layout("app.app");
     }
 }

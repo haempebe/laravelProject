@@ -26,11 +26,11 @@ class SignupComponent extends Component
             'password' => $this->password,
         ]);
         session()->flash('message', 'Account successfully created!');
-        return redirect(route("dashboard"));
+        return redirect(route("user.member.index"));
     }
 
     public function render()
     {
-        return view('livewire.pages.signup-component')->layout('app.auth');
+        return view('livewire.pages.signup-component')->layout('app.app');
     }
 }

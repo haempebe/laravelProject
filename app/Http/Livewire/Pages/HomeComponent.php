@@ -7,11 +7,6 @@ use Livewire\Component;
 
 class HomeComponent extends Component
 {
-    // public function user()
-    // {
-    //     $showUser = User::latest()->get();
-    //     return 'showUser' . $showUser;
-    // }
 
 
     public function render()

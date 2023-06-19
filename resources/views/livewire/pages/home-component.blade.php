@@ -1,10 +1,11 @@
 @section('pageTitle', 'Dashboard')
+
 @section('button')
 
     <div class="col-auto ms-auto d-print-none">
         <div class="btn-list">
 
-            <a href="{{ route('income') }}" class="btn btn-primary d-none d-sm-inline-block">
+            <a href="{{ route('finance.income.index') }}" class="btn btn-primary d-none d-sm-inline-block">
                 Get Started
             </a>
 
