@@ -40,8 +40,6 @@ Route::middleware(['guest'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get("/", HomeComponent::class)->name("dashboard");
     Route::get("/signup", SignupComponent::class)->name("signup");
-    // Route::get("/income/{incomeId}/update", UpdateComponent::class)->name("income.update");
-    // Route::delete("/income/{incomeId}/delete", IncomeComponent::class)->name("income.destroy");
 
     Route::prefix('user')->name("user.")->group(function () {
         Route::prefix('admin')->name("admin.")->group(function () {
@@ -62,6 +60,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get("", IncomeComponent::class)->name("index");
             Route::get("/create", CreateComponent::class)->name("create");
             Route::post("/store", [income::class, 'store'])->name("store");
+            Route::get("/{incomeId}/update", UpdateComponent::class)->name("update");
+            Route::delete("/{incomeId}/delete", [Income::class, 'destroy'])->name("destroy");
         });
         Route::prefix('expendition')->name("expendition.")->group(function () {
             Route::get("", ExpenditionComponent::class)->name("index");

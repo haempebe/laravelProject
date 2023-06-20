@@ -37,31 +37,32 @@
                     </thead>
                     <tbody>
                         @foreach ($showIncome as $item)
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td class="text-muted">
-                                        {{ $item->name }}
-                                    </td>
-                                    <td class="text-muted">
-                                        {{ $item->amount }}
-                                    </td>
-                                    <td class="text-muted">
-                                        {{ $item->account }}
-                                    </td>
-                                    <td class="text-muted">
-                                        {{ substr($item->description, 0, 25) }}
-                                    </td>
-                                    <td class="d-flex gap-1">
-                                        <a href="" class="btn">View</a>
-                                        <a href="" class="btn">Ubah</a>
-                                        <form class="d-inline" onsubmit="return confirm('sure to delete this data')"
-                                            action="" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn">Hapus</button>
-                                        </form>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td class="text-muted">
+                                    {{ $item->name }}
+                                </td>
+                                <td class="text-muted">
+                                    {{ $item->amount }}
+                                </td>
+                                <td class="text-muted">
+                                    {{ $item->account }}
+                                </td>
+                                <td class="text-muted">
+                                    {{ substr($item->description, 0, 25) }}
+                                </td>
+                                <td class="d-flex gap-1">
+                                    <a href="" class="btn">View</a>
+                                    <a href="{{ route('finance.income.update', $item->id) }}" class="btn">Ubah</a>
+                                    <form class="d-inline" action="{{ url('finance/income/' . $item->id . '/delete') }}"
+                                        onsubmit="return confirm('sure to delete this data')" action=""
+                                        method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn">Hapus</button>
+                                    </form>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>

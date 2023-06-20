@@ -7,13 +7,13 @@ use Livewire\Component;
 
 class IncomeComponent extends Component
 {
-    // public function destroy($incomeId)
-    // {
-    //     $findIncome = Income::find($incomeId);
-    //     $findIncome->delete();
-    //     session()->flash('message', 'Category ' . $findIncome->name . ' successfully deleted!');
-    //     return redirect()->back();
-    // }
+    public function destroy($incomeId)
+    {
+        $findIncome = Income::find($incomeId);
+        $findIncome->delete();
+        session()->flash('message', 'Category ' . $findIncome->name . ' successfully deleted!');
+        return redirect()->back();
+    }
     public function render()
     {
         $showIncome = Income::query()->latest()->get();
